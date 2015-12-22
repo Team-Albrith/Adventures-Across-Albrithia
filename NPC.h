@@ -1,0 +1,1 @@
+class NPC: public Entity;
