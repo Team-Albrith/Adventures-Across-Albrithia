@@ -2,6 +2,6 @@
 #define MAGIC_H
 class Magic{
 public:
-  Magic();
+    Magic();
 };
 #endif
