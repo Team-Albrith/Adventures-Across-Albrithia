@@ -2,6 +2,6 @@
 #define QUEST_H
 class Quest{
 public:
-  Quest();
+    Quest();
 };
 #endif

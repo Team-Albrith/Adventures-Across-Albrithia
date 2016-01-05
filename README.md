@@ -1,3 +1,3 @@
 Adventures Accross Albrithia
 ====
-A zork clone with rouge-like elements
+A zork clone with rogue-like elements
