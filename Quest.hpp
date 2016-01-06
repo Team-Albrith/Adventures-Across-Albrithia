@@ -1,5 +1,5 @@
-#ifndef QUEST_H
-#define QUEST_H
+#ifndef QUEST_HPP
+#define QUEST_HPP
 class Quest{
 public:
     Quest();
