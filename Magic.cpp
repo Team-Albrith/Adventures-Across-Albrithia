@@ -1,1 +1,1 @@
-#include "Magic.h"
+#include "Magic.hpp"
