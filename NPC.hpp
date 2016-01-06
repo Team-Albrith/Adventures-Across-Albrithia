@@ -4,7 +4,7 @@
 class NPC: public Entity{
 public:
     NPC();
-    NPC(string newName, unsigned int newMaxHp, unsigned int newStrength, unsigned int newSpeed, unsigned int newIntelligence);
+    NPC(string newName, int newMaxHp, int newStrength, int newSpeed, int newIntelligence);
   
 };
 #endif

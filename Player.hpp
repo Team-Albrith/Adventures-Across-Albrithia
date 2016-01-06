@@ -5,7 +5,7 @@
 class Player: public Entity{
 public:
     Player();
-    Player(string newName, unsigned int newMaxHp, unsigned int newStrength, unsigned int newSpeed, unsigned int newIntelligence);
+    Player(string newName, int newMaxHp, int newStrength, int newSpeed, int newIntelligence);
     void save(string filename);
     void load(string filename);
 };

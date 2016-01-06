@@ -4,6 +4,6 @@
 class Monster: public Entity{
 public:
     Monster();
-    Monster(string newName, unsigned int newMaxHp, unsigned int newStrength, unsigned int newSpeed, unsigned int newIntelligence);
+    Monster(string newName, int newMaxHp, int newStrength, int newSpeed, int newIntelligence);
 };
 #endif
