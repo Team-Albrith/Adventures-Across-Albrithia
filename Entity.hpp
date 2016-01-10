@@ -1,10 +1,12 @@
 #ifndef ENTITY_HPP
 #define ENTITY_HPP
-#include "Item.hpp"
 #include <vector>
 #include <string>
+
 using std::vector;
 using std::string;
+
+class Item;
 
 class Entity{
 public:

@@ -2,36 +2,40 @@
 #include <stdlib.h>
 
 Item::Item(string newDescription, int newMaxHp, int newStrength, int newSpeed, int newIntelligence){
-    description = newDescription;
-    maxHp = newMaxHp;
-    strength = newStrength;
-    speed = newSpeed;
-    intelligence = newIntelligence;
+  description = newDescription;
+  maxHp = newMaxHp;
+  strength = newStrength;
+  speed = newSpeed;
+  intelligence = newIntelligence;
 }
 
 Weapon::Weapon(string newDescription, int newMinDamage, int newRange, int newMaxHp, int newStrength, int newSpeed, int newIntelligence):Item(newDescription, newMaxHp, newStrength, newSpeed, newIntelligence){
-    minDamage = newMinDamage;
-    range = newRange;
+  minDamage = newMinDamage;
+  range = newRange;
 }
 
 int Weapon::getDamage()const{
-    return (rand() % minDamage) + range;
+  return (rand() % minDamage) + range;
 }
 
 Armour::Armour(string newDescription, int newDefence, int newMaxHp, int newStrength, int newSpeed, int newIntelligence):Item(newDescription, newMaxHp, newStrength, newSpeed, newIntelligence){
-    defence = newDefence;
+  defence = newDefence;
 }
 
-Potion::Potion(string newDescription, int newMaxHp, int newStrength, int newSpeed, int newIntelligence):Item(newDescription, newMaxHp, newStrength, newSpeed, newIntelligence){
-
+Potion::Potion(string newDescription, Buff newEffect, int newMaxHp, int newStrength, int newSpeed, int newIntelligence):Item(newDescription, newMaxHp, newStrength, newSpeed, newIntelligence){
+  effect = newEffect;
 }
 
-Scroll::Scroll(string newDescription, unsigned int newCharge, int newMaxHp, int newStrength, int newSpeed, int newIntelligence):Item(newDescription, newMaxHp, newStrength, newSpeed, newIntelligence){
-    charge = newCharge;
+void Potion::setEffect(Buff newEffect){
+  effect = newEffect;
 }
 
-void Scroll::setCharge(unsigned int newCharge){
-    charge = newCharge;
+Scroll::Scroll(string newDescription, Spell newEffect, int newMaxHp, int newStrength, int newSpeed, int newIntelligence):Item(newDescription, newMaxHp, newStrength, newSpeed, newIntelligence){
+  effect = newEffect;
+}
+
+void Scroll::setEffect(Spell newEffect){
+  effect = newEffect;
 }
 
 Grimoire::Grimoire(string newDescription, int newMaxHp, int newStrength, int newSpeed, int newIntelligence):Item(newDescription, newMaxHp, newStrength, newSpeed, newIntelligence){
@@ -39,12 +43,12 @@ Grimoire::Grimoire(string newDescription, int newMaxHp, int newStrength, int new
 }
 
 Grimoire::~Grimoire(){
-    for(unsigned int i = 0; i < pages.size(); i++){
-        delete pages[i];
-    }
+  for(unsigned int i = 0; i < pages.size(); i++){
+    delete pages[i];
+  }
 }
 
-void Grimoire::addPage(Scroll * newPage){
-    pages.push_back(newPage);
-    totalCharge += newPage->getCharge();
+void Grimoire::addPage(Scroll *newPage){
+  pages.push_back(newPage);
+  totalCharge += 1; //TODO: have this be calculated from the Spell contained within newPage
 }
