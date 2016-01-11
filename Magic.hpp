@@ -29,7 +29,7 @@ public:
 
     public:
       Buff(); //!< Default Constructor
-    }
+    };
 
   //! Enchantment class
   /*! Derived from Magic; Applies bonus stats to weapons and armor. */
