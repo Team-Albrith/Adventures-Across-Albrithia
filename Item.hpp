@@ -2,7 +2,8 @@
 #define ITEM_HPP
 #include <string>
 #include <vector>
-#include "Magic.hpp"
+
+#include "Spell.hpp"
 
 using std::string;
 using std::vector;
