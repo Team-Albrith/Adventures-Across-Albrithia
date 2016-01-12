@@ -11,7 +11,6 @@ using std::string;
   //! Spell class
   /*! Derived from Magic; User-performed magics. */
   class Spell {
-
   public:
     Spell(); //!< Default Constructor
   };
@@ -19,7 +18,6 @@ using std::string;
     //! Buff class
     /*! Derived from Spell; Applies effects such as regen, poison, etc. */
     class Buff : public Spell {
-
     public:
       Buff(); //!< Default Constructor
     };
