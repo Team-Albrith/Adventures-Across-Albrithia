@@ -4,9 +4,9 @@
 
 class Player: public Entity{
 public:
-    Player();
-    Player(string newName, int newMaxHp, int newStrength, int newSpeed, int newIntelligence);
-    void save(string filename);
-    void load(string filename);
+  Player();
+  Player(string newName, int newMaxHp, int newStrength, int newSpeed, int newIntelligence);
+  void save(string filename);
+  void load(string filename);
 };
 #endif

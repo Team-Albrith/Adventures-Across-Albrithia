@@ -3,7 +3,8 @@
 #include "Entity.hpp"
 class Monster: public Entity{
 public:
-    Monster();
-    Monster(string newName, int newMaxHp, int newStrength, int newSpeed, int newIntelligence);
+  Monster();
+  Monster(string newName, int newMaxHp, int newStrength, int newSpeed, int newIntelligence);
+  bool defend(Entity *attacker){}
 };
 #endif
