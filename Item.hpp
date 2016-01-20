@@ -19,7 +19,7 @@ enum DAMAGE_TYPE{
   DAMAGE_BLUDGEON,
   DAMAGE_SLASH,
   DAMAGE_ARCANE,
-  DAMAGE_NATURE,
+  DAMAGE_NATURE, //!<Represents damage from natural sources such as being on fire
   DAMAGE_DIVINE
 };
 
@@ -34,6 +34,7 @@ public:
   Item(const Item &other);
 
   string getDescription()const{return description;}
+  string getTitle()const{return title;}
   DAMAGE_TYPE getDamageType()const{return damageType;}
   virtual int getMaxHp()const{return maxHp;}
   virtual int getStrength()const{return strength;}
@@ -47,7 +48,12 @@ public:
 protected:
   string description, title;
   int maxHp, strength, speed, intelligence;//NOTE: These are the values added to stats when item is equipped/used
+  //!The type of damage this Item does when used in battle
+  /*!
+    If this Item is used in battle as a Weapon then it would deal this type of damage, note this is normally DAMAGE_BLUDGEON if this instance isn't a, or a child of Weapon
+   */
   DAMAGE_TYPE damageType;
+  //!A vector of effects that can happen from using this Item (normally as a child class)
   vector<Effect *> effects;
 };
 

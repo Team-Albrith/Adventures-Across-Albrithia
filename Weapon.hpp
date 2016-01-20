@@ -38,8 +38,8 @@ public:
   Ammunition getAmmo()const{return ammo;}
   //!Sets the type of ammo this RangedWeapon fires, also sets damageType
   void setAmmo(Ammunition newAmmo);
-
-  bool canFire()const;//!<Checks to see if there is enough ammo to fire
+  //!Checks to see if there is enough ammo to fire
+  bool canFire()const;
 
 protected:
   Ammunition ammo;
