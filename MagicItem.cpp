@@ -1,6 +1,6 @@
 #include "MagicItem.hpp"
 
-Potion::Potion(string newDescription, Buff newEffect, int newMaxHp, int newStrength, int newSpeed, int newIntelligence):Item(newDescription, newMaxHp, newStrength, newSpeed, newIntelligence){
+Potion::Potion(string newTitle, string newDescription, Buff newEffect, int newMaxHp, int newStrength, int newSpeed, int newIntelligence):Item(newTitle, newDescription, newMaxHp, newStrength, newSpeed, newIntelligence){
   effect = newEffect;
 }
 
@@ -8,7 +8,7 @@ void Potion::setEffect(Buff newEffect){
   effect = newEffect;
 }
 
-Scroll::Scroll(string newDescription, Spell newEffect, int newMaxHp, int newStrength, int newSpeed, int newIntelligence):Item(newDescription, newMaxHp, newStrength, newSpeed, newIntelligence){
+Scroll::Scroll(string newTitle, string newDescription, Spell newEffect, int newMaxHp, int newStrength, int newSpeed, int newIntelligence):Item(newTitle, newDescription, newMaxHp, newStrength, newSpeed, newIntelligence){
   effect = newEffect;
 }
 
@@ -16,7 +16,7 @@ void Scroll::setEffect(Spell newEffect){
   effect = newEffect;
 }
 
-Grimoire::Grimoire(string newDescription, int newMaxHp, int newStrength, int newSpeed, int newIntelligence):Item(newDescription, newMaxHp, newStrength, newSpeed, newIntelligence){
+Grimoire::Grimoire(string newTitle, string newDescription, int newMaxHp, int newStrength, int newSpeed, int newIntelligence):Item(newTitle, newDescription, newMaxHp, newStrength, newSpeed, newIntelligence){
 
 }
 

@@ -1,8 +1,7 @@
 #include "Weapon.hpp"
 #include <stdlib.h>
 
-Weapon::Weapon(string newDescription, DAMAGE_TYPE newDamageType, int newMinDamage, int newRange, int newMaxHp, int newStrength, int newSpeed, int newIntelligence):Item(newDescription, newMaxHp, newStrength, newSpeed, newIntelligence){
-  damageType = newDamageType;
+Weapon::Weapon(string newTitle, string newDescription, DAMAGE_TYPE newDamageType, int newMinDamage, int newRange, int newMaxHp, int newStrength, int newSpeed, int newIntelligence):Item(newTitle, newDescription, newMaxHp, newStrength, newSpeed, newIntelligence, newDamageType){
   minDamage = newMinDamage;
   range = newRange;
 }
@@ -11,8 +10,8 @@ int Weapon::getDamage(){
   return (rand() % range) + minDamage;
 }
 
-RangedWeapon::RangedWeapon(string newDescription, Ammunition ammoType, unsigned int newCurrentAmmo, unsigned int newDepletionAmount, int newMinDamage, int newRange, int newMaxHp, int newStrength, int newSpeed, int newIntelligence):Weapon(newDescription, ammoType.damageType, newMinDamage, newRange, newMaxHp, newStrength, newSpeed, newIntelligence){
-  ammo = ammoType;
+RangedWeapon::RangedWeapon(string newTitle, string newDescription, Ammunition ammoType, unsigned int newCurrentAmmo, unsigned int newDepletionAmount, int newMinDamage, int newRange, int newMaxHp, int newStrength, int newSpeed, int newIntelligence):Weapon(newTitle, newDescription, ammoType.damageType, newMinDamage, newRange, newMaxHp, newStrength, newSpeed, newIntelligence){
+  setAmmo(ammoType);
   currentAmmo = newCurrentAmmo;
   depletionAmount = newDepletionAmount;
 }
