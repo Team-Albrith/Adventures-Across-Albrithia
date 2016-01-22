@@ -3,3 +3,7 @@
 Enchantment::Enchantment() {
 
 }
+
+Enchantment::~Enchantment() {
+    
+}

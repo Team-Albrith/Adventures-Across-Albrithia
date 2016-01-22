@@ -5,11 +5,10 @@
 #include <vector>
 
 #include "Entity.hpp"
+#include "Effect.hpp"
 
 using std::string;
 using std::vector;
-
-class Effect;
 
 //! Spell class
 /*! Derived from Magic; User-performed magics. */
@@ -24,7 +23,7 @@ public:
 
   void setName(string newName);
   void setDescription(string newDescription);
-  void getManaCost(int newManaCost);
+  void setManaCost(int newManaCost);
   void setRequiredIntelligence(int newRequiredIntelligence);
   void setBaseDamage(int newBaseDamage);
 
@@ -33,7 +32,8 @@ public:
   int getManaCost()const{return manaCost;}
   int getRequiredIntelligence()const{return requiredIntelligence;}
   int getBaseDamage()const{return baseDamage;}
-  //TODO: Make getter/setter for onHitEffects
+  const Effect * const * getEffects()const{return effects.data();}
+
 private:
     string name;
     string description;

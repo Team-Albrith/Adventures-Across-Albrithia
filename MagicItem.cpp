@@ -1,10 +1,10 @@
 #include "MagicItem.hpp"
 
-Potion::Potion(string newTitle, string newDescription, Buff newEffect, int newMaxHp, int newStrength, int newSpeed, int newIntelligence):Item(newTitle, newDescription, newMaxHp, newStrength, newSpeed, newIntelligence){
+Potion::Potion(string newTitle, string newDescription, Spell newEffect, int newMaxHp, int newStrength, int newSpeed, int newIntelligence):Item(newTitle, newDescription, newMaxHp, newStrength, newSpeed, newIntelligence){
   effect = newEffect;
 }
 
-void Potion::setEffect(Buff newEffect){
+void Potion::setEffect(Spell newEffect){
   effect = newEffect;
 }
 
