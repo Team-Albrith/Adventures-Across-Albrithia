@@ -5,7 +5,7 @@
 //!An Item which grants a magical effect when consumed
 class Potion: public Item{
 public:
-  Potion(string newDescription, Buff newEffect, int newMaxHp = 0, int newStrength = 0, int newSpeed = 0, int newIntelligence = 0);
+  Potion(string newTitle, string newDescription, Buff newEffect, int newMaxHp = 0, int newStrength = 0, int newSpeed = 0, int newIntelligence = 0);
 
   Buff getEffect()const{return effect;}
   void setEffect(Buff newEffect);
@@ -20,7 +20,7 @@ protected:
 */
 class Scroll: public Item{
 public:
-  Scroll(string newDescription, Spell newEffect,  int newMaxHp = 0, int newStrength = 0, int newSpeed = 0, int newIntelligence = 0);
+  Scroll(string newTitle, string newDescription, Spell newEffect,  int newMaxHp = 0, int newStrength = 0, int newSpeed = 0, int newIntelligence = 0);
 
   Spell getEffect()const{return effect;}
   void setEffect(Spell newEffect);
@@ -35,7 +35,7 @@ protected:
 */
 class Grimoire: public Item{
 public:
-  Grimoire(string newDescription, int newMaxHp = 0, int newStrength = 0, int newSpeed = 0, int newIntelligence = 0);
+  Grimoire(string newTitle, string newDescription, int newMaxHp = 0, int newStrength = 0, int newSpeed = 0, int newIntelligence = 0);
   virtual ~Grimoire();
 
   //!Add a Scroll to the Grimoire
