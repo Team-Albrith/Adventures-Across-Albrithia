@@ -16,22 +16,25 @@ public:
   Enchantment(); //!< Default Constructor
   ~Enchantment(); //!< Destructor
   Enchantment(string newName, string newDescription);
-  //TODO: Constructors for skill, stat increase and effects
 
   void setName(string newName);
   void setDescription(string description);
+  void setStatIncrease(int hp, int strength, int speed, int intelligence);
+  void setStatIncrease(int stats[4]);
 
   string getName()const{return name;}
   string getDescription()const{return description;}
-
-  //TODO: getter/setter for skills and effects
+  int returnHPIncrease()const{return statIncrease[0];}
+  int returnStrengthIncrease()const{return statIncrease[1];}
+  int returnSpeedIncrease()const{return statIncrease[2];}
+  int returnIntelligenceIncrease()const{return statIncrease[3];}
 
 private:
     string name;
     string description;
 
-    //Parallel array of skill and its increase
-    int statIncrease[4];
+    //Increase of Stat
+    int statIncrease[4]; //<! HP, Strength, Speed, Intelligence
 
     vector<Effect*> effects;
 };

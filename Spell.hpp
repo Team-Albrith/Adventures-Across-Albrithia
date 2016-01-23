@@ -35,12 +35,12 @@ public:
   const Effect * const * getEffects()const{return effects.data();}
 
 private:
-    string name;
-    string description;
-    int manaCost;
-    int requiredIntelligence;
-    int baseDamage;
-    vector<Effect*> effects;
+    string name; //!< Name
+    string description; //!< Description
+    int manaCost; //!< Mana Cost
+    int requiredIntelligence; //!< Required Intelligence
+    int baseDamage; //!< Base Damage of Spell, if any
+    vector<Effect*> effects; //!< Applied Effects
 };
 
 #endif
