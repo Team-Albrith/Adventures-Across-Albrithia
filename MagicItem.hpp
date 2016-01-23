@@ -5,13 +5,13 @@
 //!An Item which grants a magical effect when consumed
 class Potion: public Item{
 public:
-  Potion(string newTitle, string newDescription, Buff newEffect, int newMaxHp = 0, int newStrength = 0, int newSpeed = 0, int newIntelligence = 0);
+  Potion(string newTitle, string newDescription, Spell newEffect, int newMaxHp = 0, int newStrength = 0, int newSpeed = 0, int newIntelligence = 0);
 
-  Buff getEffect()const{return effect;}
-  void setEffect(Buff newEffect);
+  Spell getEffect()const{return effect;}
+  void setEffect(Spell newEffect);
 
 protected:
-  Buff effect; //!<The effect that happens upon consumption of this Potion
+  Spell effect; //!<The effect that happens upon consumption of this Potion
 };
 
 //!An Item which casts a spell when used

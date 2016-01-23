@@ -4,6 +4,8 @@ Spell::Spell(){
 
 }
 
-Buff::Buff(){
-
+Spell::~Spell() {
+    for (const Effect* spell : effects) {
+        delete spell;
+    }
 }
